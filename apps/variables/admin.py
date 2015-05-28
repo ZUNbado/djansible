@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import VariableType, GroupVariableItems, GroupVariable, SimpleVariable, SimpleVariableValue
+from .models import VariableType, GroupVariableItems, GroupVariable, SimpleVariable
 
 
 class GroupVariableItemsInline(admin.TabularInline):
@@ -12,4 +12,3 @@ class GroupVariableAdmin(admin.ModelAdmin):
 admin.site.register(VariableType)
 admin.site.register(GroupVariable, GroupVariableAdmin)
 admin.site.register(SimpleVariable)
-admin.site.register(SimpleVariableValue)
