@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'jc4=ssms6oipu#zojfgl$fqfyd%$2$d1%tvlkyzp!*r+)7tm7m'
+SECRET_KEY = '2y@j-yg2d!$5)=4dbg2!37=(5-py14g%w8lj)tm=o_^%=1jgbs'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,9 +30,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli_nested',
     'grappelli',
-    'apps.variables',
-    'apps.host',
+    'apps.inventory',
+    'apps.var',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
