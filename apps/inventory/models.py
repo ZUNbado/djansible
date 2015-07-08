@@ -23,6 +23,11 @@ class HostGroupVarValue(models.Model):
     var = models.ForeignKey(GroupVariable)
     host = models.ForeignKey(Host)
 
+    def save(self, **kwargs):
+        super(HostGroupVarValue, self).save(**kwargs)
+        for gvi in GroupVariableItems.objects.filter(group=self.var):
+            HostGroupVarItemValue.objects.get_or_create(group=self, item=gvi, value='')
+
 class HostGroupVarItemValue(models.Model):
     group = models.ForeignKey(HostGroupVarValue)
     item = models.ForeignKey(GroupVariableItems)
