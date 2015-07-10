@@ -55,11 +55,11 @@ class InventoryView(TemplateView):
                     if hgviv.value:
                         groupvar[hgviv.item.name]  = hgviv.value
                 if hgvv.var.name in host_meta:
-                    if type(host_meta[hviv.var.name]) != list:
-                        host_meta[hviv.var.name] = [ host_meta[hviv.var.name] ]
-                    host_meta[hviv.var.name].append(groupvar)
+                    if type(host_meta[hgvv.var.name]) != list:
+                        host_meta[hgvv.var.name] = [ host_meta[hgvv.var.name] ]
+                    host_meta[hgvv.var.name].append(groupvar)
                 else:
-                    host_meta[hviv.var.name] = groupvar
+                    host_meta[hgvv.var.name] = groupvar
             for hsvv in HostSimpleVarValue.objects.filter(host=host):
                 if hsvv.var.name in host_meta:
                     if type(host_meta[hsvv.var.name]) != list:
